@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Support Widget</title>
+  </head>
+  <body>
+    <div id="root">
+      <div
+        id="support_widget"
+        data-primary_color="crimson"
+        data-name="Demo Test"
+        data-email=""
+      ></div>
+    </div>
+
+    <div class="demo_example">
+      <h1>Support Widget</h1>
+      <p>
+        A simple widget that can serve as support contact form for any website.
+      </p>
+
+      <div class="form">
+        <label for="">Enter your support email to test</label>
+        <input
+          type="text"
+          name="ddd"
+          placeholder="Email"
+          class="demo_email_input"
+          onchange="reLoad()"
+        />
+        <br />
+        <small>Tap on the widget button to enter your message</small>
+      </div>
+
+      <h2>Usage</h2>
+      <p>
+        Create a div with an <code>id="support_widget"</code> and
+        <code>data-email="yoursupport@email.com"</code>
+      </p>
+      <pre><code>&lt;div id="support_widget" data-email="yoursupport@email.com"&gt;&lt;/div&gt;</code></pre>
+
+      <p>
+        You also need to add this css and javascript file to the buttom of your
+        web page close to the body tag.
+      </p>
+      <pre><code>&lt;link href="https://supportwidget.vercel.app/index.css" rel="stylesheet" /&gt;
+&lt;script src="https://supportwidget.vercel.app/"&gt;&lt;/script&gt;</code></pre>
+
+      <h2>Prop</h2>
+      <table class="table" border="2">
+        <thead>
+          <tr>
+            <th>Prop</th>
+            <th>Required</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>data-email</td>
+            <td><code>true</code></td>
+            <td>string</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data-primary_color</td>
+            <td><code>false</code></td>
+            <td>string</td>
+            <td>#ff7f00</td>
+          </tr>
+          <tr>
+            <td>data-name</td>
+            <td><code>false</code></td>
+            <td>string</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data-heading</td>
+            <td><code>false</code></td>
+            <td>string</td>
+            <td>Welcome, You can drop us an email...</td>
+          </tr>
+          <tr>
+            <td>data-success_message</td>
+            <td><code>false</code></td>
+            <td>string</td>
+            <td>Your message was sent successfully.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="source_file">
+      <script id="myscript" src="https://supportwidget.vercel.app/"></script>
+    </div>
+    <link href="https://supportwidget.vercel.app/index.css" rel="stylesheet" />
+    <script src="./index.js"></script>
+  </body>
+</html>
