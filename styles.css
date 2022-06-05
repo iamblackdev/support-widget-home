@@ -160,6 +160,23 @@ code {
   d: path("M 3 2.5 L 17 16.346") !important;
 }
 
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
 @media (max-width: 767px) {
   .demo_example .side_nav.close {
     transform: translateX(-240px);
