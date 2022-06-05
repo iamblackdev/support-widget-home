@@ -1,16 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .demo_example {
-  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #474747;
+}
+.demo_example .header {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: #f1f1f1;
+}
+
+.demo_example .header h1 {
+  margin: 0 auto;
+}
+.demo_example .header .menu_button {
+  display: none;
+}
+
+.demo_example .side_nav {
+  background-color: white;
+  padding: 20px 0px;
+  width: 100%;
+  max-width: 240px;
+  position: fixed;
+  border-right: 1px solid #f1f1f1;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.side_nav span {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 16px 0;
+  padding-left: 70px;
+  color: #474747;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-bottom: 4px;
+}
+
+.side_nav span.active,
+.side_nav span:hover {
+  color: white;
+  background-color: #ff7f00;
+}
+
+.demo_example .nav_content {
+  margin-left: 240px;
+  padding: 0 15px;
+  padding-top: 30px;
+}
+.demo_example .nav_content .hidden {
+  display: none;
 }
 .demo_example .table {
   margin-top: 30px;
 }
 
-h2 {
-  margin-top: 30px;
+.table_wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.nav_content h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
+  color: #474747;
+  margin-bottom: 12px;
 }
 .table {
   border-collapse: collapse;
@@ -29,11 +102,16 @@ h2 {
   font-size: 16px;
   display: block;
   margin-bottom: 8px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .form input {
-  height: 20px;
-  padding: 5px 10px;
+  height: 41px;
+  padding: 0px 10px;
+  background: #f1f1f1;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 5px;
 }
 
 pre {
@@ -50,7 +128,8 @@ pre {
   padding-right: 1.1428571em;
   padding-bottom: 0.8571429em;
   padding-left: 1.1428571em;
-  width: fit-content;
+  max-width: 700px;
+  width: 100%;
 }
 
 pre code {
@@ -67,4 +146,32 @@ code {
   font-size: 85%;
   background-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
+}
+.demo_example .header svg path {
+  transition: 0.3s;
+}
+.demo_example .header svg.close path:nth-child(1) {
+  d: path("M 3 16.5 L 17 2.5") !important;
+}
+.demo_example .header svg.close path:nth-child(2) {
+  opacity: 0;
+}
+.demo_example .header svg.close path:nth-child(3) {
+  d: path("M 3 2.5 L 17 16.346") !important;
+}
+
+@media (max-width: 767px) {
+  .demo_example .side_nav.close {
+    transform: translateX(-240px);
+  }
+  .demo_example .header .menu_button {
+    display: block;
+  }
+  .demo_example .side_nav {
+    box-shadow: 32px 0px 26px -41px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  .demo_example .nav_content {
+    margin-left: 0;
+  }
 }

@@ -11,88 +11,132 @@
     <div id="root">
       <div
         id="support_widget"
-        data-primary_color="crimson"
+        data-primary_color="#ff7f00"
         data-name="Demo Test"
         data-email=""
       ></div>
     </div>
 
     <div class="demo_example">
-      <h1>Support Widget</h1>
-      <p>
-        A simple widget that can serve as support contact form for any website.
-      </p>
-
-      <div class="form">
-        <label for="">Enter your support email to test</label>
-        <input
-          type="text"
-          name="ddd"
-          placeholder="Email"
-          class="demo_email_input"
-          onchange="reLoad()"
-        />
-        <br />
-        <small>Tap on the widget button to enter your message</small>
+      <div class="header">
+        <svg width="23" height="23" viewBox="0 0 23 23" class="menu_button">
+          <path
+            fill="transparent"
+            stroke-width="3"
+            stroke="hsl(0, 0%, 18%)"
+            stroke-linecap="round"
+            d="M 2 2.5 L 20 2.5"
+          ></path>
+          <path
+            fill="transparent"
+            stroke-width="3"
+            stroke="hsl(0, 0%, 18%)"
+            stroke-linecap="round"
+            d="M 2 9.423 L 20 9.423"
+            opacity="1"
+          ></path>
+          <path
+            fill="transparent"
+            stroke-width="3"
+            stroke="hsl(0, 0%, 18%)"
+            stroke-linecap="round"
+            d="M 2 16.346 L 20 16.346"
+          ></path>
+        </svg>
+        <h1>Support Widget</h1>
       </div>
+      <div class="container">
+        <div class="side_nav close">
+          <span class="nav_button active">Introduction</span>
+          <span class="nav_button">Usage</span>
+          <span class="nav_button">Props</span>
+        </div>
+        <div class="nav_content">
+          <div class="introduction_content content">
+            <h2>Introduction</h2>
+            <p>
+              A simple widget that can serve as support contact form for any
+              website.
+            </p>
+            <div class="form">
+              <label for="">Enter your support email to test</label>
+              <input
+                type="text"
+                name="ddd"
+                placeholder="Email"
+                class="demo_email_input"
+                onchange="reLoad()"
+              />
+              <br />
+              <small>Tap on the widget button to enter your message</small>
+            </div>
+          </div>
 
-      <h2>Usage</h2>
-      <p>
-        Create a div with an <code>id="support_widget"</code> and
-        <code>data-email="yoursupport@email.com"</code>
-      </p>
-      <pre><code>&lt;div id="support_widget" data-email="yoursupport@email.com"&gt;&lt;/div&gt;</code></pre>
+          <div class="usage_content content hidden">
+            <h2>Usage</h2>
+            <p>
+              Create a div with an <code>id="support_widget"</code> and
+              <code>data-email="yoursupport@email.com"</code>
+            </p>
+            <pre><code>&lt;div id="support_widget" data-email="yoursupport@email.com"&gt;&lt;/div&gt;</code></pre>
 
-      <p>
-        You also need to add this css and javascript file to the buttom of your
-        web page close to the body tag.
-      </p>
-      <pre><code>&lt;link href="https://supportwidget.vercel.app/index.css" rel="stylesheet" /&gt;
+            <p>
+              You also need to add this css and javascript file to the buttom of
+              your web page close to the body tag.
+            </p>
+            <pre><code>&lt;link href="https://supportwidget.vercel.app/index.css" rel="stylesheet" /&gt;
 &lt;script src="https://supportwidget.vercel.app/"&gt;&lt;/script&gt;</code></pre>
+          </div>
 
-      <h2>Prop</h2>
-      <table class="table" border="2">
-        <thead>
-          <tr>
-            <th>Prop</th>
-            <th>Required</th>
-            <th>Type</th>
-            <th>Default</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>data-email</td>
-            <td><code>true</code></td>
-            <td>string</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>data-primary_color</td>
-            <td><code>false</code></td>
-            <td>string</td>
-            <td>#ff7f00</td>
-          </tr>
-          <tr>
-            <td>data-name</td>
-            <td><code>false</code></td>
-            <td>string</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>data-heading</td>
-            <td><code>false</code></td>
-            <td>string</td>
-            <td>Welcome, You can drop us an email...</td>
-          </tr>
-          <tr>
-            <td>data-success_message</td>
-            <td><code>false</code></td>
-            <td>string</td>
-            <td>Your message was sent successfully.</td>
-          </tr>
-        </tbody>
-      </table>
+          <div class="prop_content content hidden">
+            <h2>Props</h2>
+            <div class="table_wrapper">
+              <table class="table" border="2">
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Required</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>data-email</td>
+                    <td><code>true</code></td>
+                    <td>string</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>data-primary_color</td>
+                    <td><code>false</code></td>
+                    <td>string</td>
+                    <td><code>#ff7f00</code></td>
+                  </tr>
+                  <tr>
+                    <td>data-name</td>
+                    <td><code>false</code></td>
+                    <td>string</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>data-heading</td>
+                    <td><code>false</code></td>
+                    <td>string</td>
+                    <td>Welcome, You can drop us an email...</td>
+                  </tr>
+                  <tr>
+                    <td>data-success_message</td>
+                    <td><code>false</code></td>
+                    <td>string</td>
+                    <td>Your message was sent successfully.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="source_file">
