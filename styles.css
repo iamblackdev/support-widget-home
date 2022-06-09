@@ -149,6 +149,7 @@ code {
 }
 .demo_example .header svg path {
   transition: 0.3s;
+  transform-origin: 0px;
 }
 .demo_example .header svg.close path:nth-child(1) {
   d: path("M 3 16.5 L 17 2.5") !important;
@@ -191,4 +192,11 @@ label:focus,
   .demo_example .nav_content {
     margin-left: 0;
   }
+}
+.demo_example .footer {
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
 }
